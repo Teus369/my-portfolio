@@ -16,7 +16,6 @@
     --second-bg-color: #112e42;
     --text-color: #ededed;
     --main-color: #00abf0;
-
 }
 
 html {
@@ -27,7 +26,6 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
-
 }
 
 .header {
@@ -42,7 +40,6 @@ body {
     align-items: center;
     z-index: 100;
     transition: .3s;
-
 }
 
 .header.sticky {
@@ -54,7 +51,6 @@ body {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
-
 }
 
 .navbar {
@@ -67,13 +63,11 @@ body {
     font-weight: 500;
     margin-left: 3.5rem;
     transition: .3s;
-
 }
 
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
-
 }
 
 #menu-icon {
@@ -82,13 +76,11 @@ body {
     color: var(--text-color);
     cursor: pointer;
     display: none;
-
 }
 
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
-
 }
 
 .home {
@@ -98,13 +90,11 @@ section {
     background: url('../images/test3.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 .home-content {
     max-width: 60rem;
     z-index: 99;
-
 }
 
 .home-content h1 {
@@ -113,7 +103,6 @@ section {
     font-size: 4.6rem;
     font-weight: 700;
     line-height: 1.3;
-
 }
 
 .home-content h1 span {
@@ -123,7 +112,6 @@ section {
 .home-content .text-animate {
     position: relative;
     width: 32.8rem;
-
 }
 
 .home-content .text-animate h3 {
@@ -135,14 +123,12 @@ section {
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -33rem 0;
-    
 
 }
 
-.home.show-animate .home-content .text-animate h3{
+.home.show-animate .home-content .text-animate h3 {
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
-
 }
 
 .home-content .text-animate h3::before {
@@ -155,11 +141,9 @@ section {
     border-right: 2px solid var(--main-color);
     z-index: -1;
     transition: .5s;
-    
-
 }
 
-.home.show-animate .home-content .text-animate h3::before{
+.home.show-animate .home-content .text-animate h3::before {
     animation: homeCursorText 6s linear infinite;
     animation-delay: 2s;
 }
@@ -168,7 +152,6 @@ section {
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
-
 }
 
 .btn-box {
@@ -177,7 +160,6 @@ section {
     justify-content: space-between;
     width: 34.5rem;
     height: 5rem;
-
 }
 
 .btn-box .btn {
@@ -197,7 +179,6 @@ section {
     z-index: 1;
     overflow: hidden;
     transition: .5s;
-
 }
 
 .btn-box .btn:hover {
@@ -228,12 +209,10 @@ section {
     background: var(--bg-color);
     z-index: -1;
     transition: .5s;
-
 }
 
 .btn-box .btn:hover::before {
     width: 100%;
-
 }
 
 .home-sci {
@@ -242,7 +221,6 @@ section {
     width: 170px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .home-sci a {
@@ -260,12 +238,10 @@ section {
     z-index: 1;
     overflow: hidden;
     transition: .5s;
-
 }
 
 .home-sci a:hover {
     color: var(--bg-color);
-
 }
 
 
@@ -283,7 +259,6 @@ section {
 
 .home-sci a:hover:before {
     width: 100%;
-
 }
 
 .home-imgHouver {
@@ -294,13 +269,11 @@ section {
     height: 100%;
     background: transparent;
     transition: 3s;
-
 }
 
 .home-imgHouver:hover {
     background: var(--bg-color);
     opacity: .8;
-
 }
 
 .about {
@@ -311,7 +284,6 @@ section {
     gap: 2rem;
     background: var(--second-bg-color);
     padding-bottom: 6rem;
-
 }
 
 .heading {
@@ -319,7 +291,6 @@ section {
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
-
 }
 
 span {
@@ -334,7 +305,6 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .about-img img {
@@ -360,7 +330,6 @@ span {
 
 .about-content {
     text-align: center;
-
 }
 
 .about-content h3 {
@@ -373,19 +342,15 @@ span {
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
-    /* mudei o certo é margin: 2rem 0 3rem;*/
-
 }
 
 .btn-box.btns {
     display: inline-block;
     width: 15rem;
-
 }
 
 .btn-box.btns a::before {
     background: var(--second-bg-color);
-
 }
 
 .education {
@@ -395,19 +360,16 @@ span {
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
-
 }
 
 .education .education-row {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
-
 }
 
 .education-row .education-column {
     flex: 1 1 40rem;
-
 }
 
 .education-column .title {
@@ -415,19 +377,16 @@ span {
     display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem 2rem;
-
 }
 
 .education-column .education-box {
     position: relative;
     border-left: .2rem solid var(--main-color);
-
 }
 
 .education-box .education-content {
     position: relative;
     padding-left: 2rem;
-
 }
 
 .education-box .education-content::before {
@@ -439,7 +398,6 @@ span {
     height: 2rem;
     background: var(--main-color);
     border-radius: 50%;
-
 }
 
 .education-content .content {
@@ -449,7 +407,6 @@ span {
     border-radius: .6rem;
     margin-bottom: 2rem;
     overflow: hidden;
-
 }
 
 .education-content .content::before {
@@ -462,29 +419,24 @@ span {
     background: var(--second-bg-color);
     z-index: -1;
     transition: .5s;
-
 }
 
 .education-content .content:hover:before {
     width: 100%;
-
 }
 
 .education-content .content .year {
     font-size: 2rem;
     color: var(--main-color);
     padding-bottom: .5rem;
-
 }
 
 .education-content .content .year i {
     padding-right: 1rem;
-
 }
 
 .education-content .content h3 {
     font-size: 2rem;
-
 }
 
 .education-content .content p {
@@ -492,12 +444,10 @@ span {
     padding-top: .5rem;
 }
 
-
 .skills {
     min-height: auto;
     padding-bottom: 7rem;
     background: var(--second-bg-color);
-
 }
 
 .skills h2 {
@@ -510,12 +460,10 @@ span {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
-
 }
 
 .skills-row .skills-column {
     flex: 1 1 40rem;
-
 }
 
 .skills-column .title {
@@ -523,12 +471,10 @@ span {
     display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem;
-
 }
 
 .skills-column .skills-box {
     position: relative;
-
 }
 
 .skills-box .skills-content {
@@ -538,7 +484,6 @@ span {
     padding: .5rem 1.5rem;
     z-index: 1;
     overflow: hidden;
-
 }
 
 .skills-box .skills-content::before {
@@ -551,7 +496,6 @@ span {
     background: var(--bg-color);
     z-index: -1;
     transition: .5s;
-
 }
 
 .skills-box .skills-content:hover::before {
@@ -566,7 +510,6 @@ span {
     font-size: 1.7rem;
     display: flex;
     justify-content: space-between;
-
 }
 
 .skills-content .progress h3 span {
@@ -579,7 +522,6 @@ span {
     border: .2rem solid var(--main-color);
     padding: .5rem;
     margin: 1rem 0;
-
 }
 
 .skills-content .progress .bar span {
@@ -587,73 +529,57 @@ span {
     height: 100%;
     border-radius: .3rem;
     background: var(--main-color);
-
 }
 
-
 /*Porcentagem da Coding Skills */
-
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
     width: 90%;
-
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
     width: 80%;
-
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
     width: 65%;
-
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
     width: 75%;
-
 }
 
-
 /*Porcentagem do Professional Skills */
-
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
     width: 90%;
-
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
     width: 80%;
-
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
     width: 65%;
-
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
     width: 75%;
-
 }
 
 .contact {
-  min-height: auto;
+    min-height: auto;
     padding-bottom: 7rem;
-
 }
 
 .contact h2 {
     display: inline-block;
-    left: 50%; 
+    left: 50%;
     transform: translateX(-50%);
-   
 }
 
 .contact form {
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
-
 }
 
 .contact .imput-box {
@@ -661,14 +587,12 @@ span {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 .contact form .imput-box .imput-field {
     position: relative;
     width: 49%;
     margin: .8rem 0;
-
 }
 
 .contact form .imput-box .imput-field input,
@@ -681,13 +605,11 @@ span {
     background: transparent;
     border-radius: .6rem;
     border: .2rem solid var(--main-color);
-
 }
 
 .contact form .imput-box .imput-field input::placeholder,
 .contact form .textarea-field textarea::placeholder {
     color: var(--text-color);
-
 }
 
 .contact form .focus {
@@ -700,7 +622,6 @@ span {
     border-radius: .6rem;
     z-index: -1;
     transition: .5s;
-
 }
 
 .contact form .imput-box .imput-field input:focus~.focus,
@@ -708,14 +629,12 @@ span {
 .contact form .textarea-field textarea:focus~.focus,
 .contact form .textarea-field textarea:valid~.focus {
     width: 100%;
-
 }
 
 .contact form .textarea-field {
     position: relative;
     margin: .8rem 0 2.7rem;
     display: flex;
-
 }
 
 .contact form .textarea-field textarea {
@@ -724,7 +643,6 @@ span {
 
 .contact .btn-box.btns .btn {
     cursor: pointer;
-
 }
 
 .footer {
@@ -734,7 +652,6 @@ span {
     flex-wrap: wrap;
     padding: 2rem 9%;
     background: var(--second-bg-color);
-
 }
 
 .footer-text,
@@ -742,10 +659,8 @@ span {
     position: relative;
 }
 
-
 .footer-text p {
     font-size: 1.6rem;
-
 }
 
 .footer-iconTop a {
@@ -759,7 +674,6 @@ span {
     border-radius: .6rem;
     z-index: 1;
     overflow: hidden;
-
 }
 
 .footer-iconTop a::before {
@@ -778,18 +692,14 @@ span {
     width: 100%;
 }
 
-
-
 .footer-iconTop a i {
     font-size: 2.4rem;
     color: var(--bg-color);
     transition: .5s;
-
 }
 
 .footer-iconTop a:hover i {
     color: var(--main-color);
-
 }
 
 .animate {
@@ -800,12 +710,10 @@ span {
     height: 100%;
     background: var(--bg-color);
     z-index: 98;
-
 }
 
-.animate.home-img{
+.animate.home-img {
     width: 50%;
-
 }
 
 .logo .animate,
@@ -814,14 +722,12 @@ span {
 .home.show-animate .animate {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
-
 }
 
 .animate.scroll {
     transition: 1s ease;
     transition-delay: calc(.3s / var(--i));
     animation: none;
-
 }
 
 section:nth-child(odd) .animate.scroll,
@@ -829,7 +735,7 @@ section:nth-child(odd) .animate.scroll,
     background: var(--second-bg-color);
 }
 
-.education .education-box .animate.scroll{
+.education .education-box .animate.scroll {
     width: 105%;
 }
 
@@ -840,9 +746,7 @@ section:nth-child(odd) .animate.scroll,
 .footer.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
     width: 0;
-
 }
-
 
 /*responsivo*/
 @media (max-width: 1200px) {
@@ -868,16 +772,13 @@ section:nth-child(odd) .animate.scroll,
     .footer {
         padding: 2rem 4%;
     }
-
 }
 
 @media (max-width: 850px) {
     .animate.home-img {
         width: 55%;
     }
-
 }
-
 
 @media (max-width: 768px) {
     .header {
@@ -904,7 +805,6 @@ section:nth-child(odd) .animate.scroll,
     .navbar.active {
         left: 0;
         transition-delay: 0s;
-
     }
 
     .navbar .active-nav {
@@ -932,7 +832,6 @@ section:nth-child(odd) .animate.scroll,
         transform: translateX(-20rem);
         transition: 025rem ease;
         transition-delay: 0s;
-
     }
 
     .navbar.active a {
@@ -945,9 +844,7 @@ section:nth-child(odd) .animate.scroll,
         background-color: var(--bg-color);
         opacity: .6;
     }
-
 }
-
 
 @media (max-width: 520) {
     html {
@@ -967,7 +864,6 @@ section:nth-child(odd) .animate.scroll,
         width: 38px;
         height: 38px;
     }
-
 }
 
 @media (max-width: 462px) {
@@ -991,7 +887,6 @@ section:nth-child(odd) .animate.scroll,
         margin-top: 2rem;
         text-align: center;
     }
-
 }
 
 @media (max-width: 371px) {
@@ -1009,7 +904,6 @@ section:nth-child(odd) .animate.scroll,
     .home-content h1 {
         font-size: 5rem;
     }
-
 }
 
 /*Animação*/
@@ -1024,7 +918,6 @@ section:nth-child(odd) .animate.scroll,
     65%,
     85% {
         background-position: 0 0;
-
     }
 }
 
@@ -1047,7 +940,6 @@ section:nth-child(odd) .animate.scroll,
     81% {
         opacity: 0;
     }
-
 }
 
 @keyframes aboutSpinner {
