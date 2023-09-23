@@ -1,49 +1,38 @@
-/*Animação*/
+/* Animação para o background do texto */
 @keyframes homeBgText {
-
-    0%,
-    10%,
-    100% {
-        background-position: -33rem 0;
+    0%, 10%, 100% {
+        background-position: -39rem 0; /*barra que se mexe no inicio*/
     }
-
-    65%,
-    85% {
+    65%, 85% {
         background-position: 0 0;
     }
 }
 
+/* Animação para o cursor do texto */
 @keyframes homeCursorText {
-
-    0%,
-    10%,
-    100% {
+    0%, 10%, 100% {
         width: 0;
     }
-
-    65%,
-    78%,
-    85% {
+    65%, 78%, 85% {
         width: 100%;
         opacity: 1;
     }
-
-    75%,
-    81% {
+    75%, 81% {
         opacity: 0;
     }
 }
 
+/* Animação para o spinner */
 @keyframes aboutSpinner {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
-
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
+/* Animação para mostrar à direita */
 @keyframes showRight {
     0% {
         width: 100%;
