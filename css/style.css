@@ -114,6 +114,7 @@ section {
     background-size: cover;
     background-position: center;
     position: relative;
+    min-height: 100vh;
 }
 
 .home-content {
@@ -329,6 +330,8 @@ span {
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
+    min-height: 100vh;
+
 }
 
 .education .education-row {
@@ -414,7 +417,7 @@ span {
 }
 
 .skills {
-    min-height: auto;
+    min-height: 100vh;
     padding-bottom: 7rem;
     background: var(--second-bg-color);
 }
