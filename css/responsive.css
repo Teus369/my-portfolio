@@ -5,7 +5,6 @@
     }
 }
 
-
 @media (max-width: 991px) {
     .header {
         padding: 2rem 4%;
@@ -96,7 +95,7 @@
     }
 }
 
-@media (max-width: 520) {
+@media (max-width: 520px) {
     html {
         font-size: 50%;
     }

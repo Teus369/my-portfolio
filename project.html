@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<style>
+    :root {
+        --bg-color: #081b29;
+        --second-bg-color: #112e42;
+        --text-color: #ededed;
+        --main-color: #00abf0;
+    }
+
+    body {
+        text-align: center;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 20px;
+    }
+
+    .containe {
+        max-width: 900px;
+        margin: 10px auto;
+        padding: 20px;
+        background-color: var(--second-bg-color);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        justify-content: space-between;
+
+    }
+
+    p {
+        font-size: 1.6rem;
+        padding-top: 0.5rem;
+    }
+
+    .project {
+        margin: 20px;
+        padding: 1.5rem;
+        border: .2rem solid var(--main-color);
+        border-radius: 0.6rem;
+        background-color: var(--bg-color);
+        display: inline-block;
+        text-align: center;
+    }
+
+    .project img {
+        width: 220px;
+        border-radius: 5px;
+    }
+
+    .project-title a {
+        font-size: 1.7rem;
+        color: var(--text-color);
+        font-weight: 500;
+        text-decoration-line: underline;
+        text-decoration-style: double;
+    }
+
+    .proj {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 31rem;
+        height: 5rem;
+    }
+
+    .proj .btn {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 100%;
+        background-color: var(--main-color);
+        border: .2rem solid var(--main-color);
+        border-radius: .8rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        color: var(--bg-color);
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    .proj .btn:hover {
+        color: var(--main-color);
+    }
+
+    .proj.btn:nth-child(2)::before {
+        background: var(--main-color);
+
+    }
+
+    .proj .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--bg-color);
+        z-index: -1;
+        transition: .5s;
+    }
+
+    .proj .btn:hover::before {
+        width: 100%;
+    }
+
+    .proj.btns {
+        display: inline-block;
+        width: 15rem;
+    }
+
+    .proj.btns a::before {
+        background: var(--second-bg-color);
+    }
+</style>
+
+
+</head>
+
+<body>
+
+
+    <div class="containe">
+        <h2 class="heading">Meus <span>Projetos</span></h2>
+
+        <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 1">
+            <p class="project-title"><a href="">Projeto 1</a></p>
+            <p>Descrição do Projeto 1.</p>
+            <div class="proj">
+                <a href="#contato" class="btn">Abrir</a>
+                <a href="#contato" class="btn">Codigo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 1">
+            <p class="project-title"><a href="">Projeto 1</a></p>
+            <p>Descrição do Projeto 1.</p>
+            <div class="proj">
+                <a href="#contato" class="btn">Abrir</a>
+                <a href="#contato" class="btn">Codigo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 1">
+            <p class="project-title"><a href="">Projeto 1</a></p>
+            <p>Descrição do Projeto 1.</p>
+            <div class="proj">
+                <a href="#contato" class="btn">Abrir</a>
+                <a href="#contato" class="btn">Codigo</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

@@ -719,3 +719,78 @@ section:nth-child(odd) .animate.scroll,
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
+
+
+
+
+
+
+
+
+
+
+/* <style>
+        :root {
+            --bg-color: #081b29;
+            --second-bg-color: #112e42;
+            --text-color: #ededed;
+            --main-color: #00abf0;
+        }
+
+        body {
+            text-align: center;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .containe {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--second-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: var(--main-color);
+        }
+
+        .project {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid var(--main-color);
+            border-radius: 5px;
+            background-color: var(--bg-color);
+            display: inline-block;
+            text-align: left;
+            width: 100%; 
+            box-sizing: border-box;
+        }
+
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .project-title {
+            font-weight: bold;
+        }
+
+        img {
+            width: 220px;
+        }
+        @media (min-width: 768px) {
+
+            .project {
+                width: calc(33.33% - 40px); 
+                margin: 20px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .containe {
+                padding: 30px;
+            }
+        }
+    </style> */
