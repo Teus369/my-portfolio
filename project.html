@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Projetos</title>
-
+    
+    <link rel="shortcut icon" href="fav-proj.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sobre.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -30,14 +31,15 @@
     }
 
     .containe {
-        max-width: 900px;
+        max-width: 866px;
         margin: 10px auto;
         padding: 20px;
         background-color: var(--second-bg-color);
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        justify-content: space-between;
-
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
     }
 
     p {
@@ -56,7 +58,7 @@
     }
 
     .project img {
-        width: 220px;
+        width: 26vh;
         border-radius: 5px;
     }
 
@@ -68,108 +70,115 @@
         text-decoration-style: double;
     }
 
-    .proj {
-        position: relative;
+    .project-buttons {
         display: flex;
         justify-content: space-between;
-        width: 31rem;
-        height: 5rem;
+        align-items: center;
+        margin-top: 10px;
     }
 
-    .proj .btn {
-        position: relative;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 15rem;
-        height: 100%;
+    .project-buttons .btn {
+        padding: 10px 20px;
         background-color: var(--main-color);
-        border: .2rem solid var(--main-color);
-        border-radius: .8rem;
+        border: 0.2rem solid var(--main-color);
+        border-radius: 0.8rem;
         font-size: 1.8rem;
         font-weight: 600;
-        letter-spacing: .1rem;
         color: var(--bg-color);
-        z-index: 1;
-        overflow: hidden;
-        transition: .5s;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
     }
 
-    .proj .btn:hover {
+    .project-buttons .btn:hover {
+        background-color: var(--bg-color);
         color: var(--main-color);
     }
 
-    .proj.btn:nth-child(2)::before {
-        background: var(--main-color);
-
-    }
-
-    .proj .btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background: var(--bg-color);
-        z-index: -1;
-        transition: .5s;
-    }
-
-    .proj .btn:hover::before {
+    h2.heading {
         width: 100%;
-    }
-
-    .proj.btns {
-        display: inline-block;
-        width: 15rem;
-    }
-
-    .proj.btns a::before {
-        background: var(--second-bg-color);
+        text-align: center;
     }
 </style>
 
-
-</head>
-
 <body>
-
-
     <div class="containe">
         <h2 class="heading">Meus <span>Projetos</span></h2>
 
         <div class="project">
             <img src="images/xxx.jpeg" alt="Projeto 1">
-            <p class="project-title"><a href="">Projeto 1</a></p>
-            <p>Descrição do Projeto 1.</p>
-            <div class="proj">
+            <p class="project-title"><a href="#">Projeto 1</a></p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum repellendus officia, temporibus quasi,
+                laboriosam architecto unde debitis quaerat voluptatibus obcaecati at, dolorum ab iure iste officiis
+                dolores tempora inventore. Nostrum velit eius quaerat. Beatae, dicta!</p>
+            <div class="project-buttons">
                 <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Codigo</a>
+                <a href="#contato" class="btn">Código</a>
             </div>
         </div>
 
         <div class="project">
-            <img src="images/xxx.jpeg" alt="Projeto 1">
-            <p class="project-title"><a href="">Projeto 1</a></p>
-            <p>Descrição do Projeto 1.</p>
-            <div class="proj">
+            <img src="images/xxx.jpeg" alt="Projeto 2">
+            <p class="project-title"><a href="#">Projeto 2</a></p>
+            <p>Descrição do Projeto 2.</p>
+            <div class="project-buttons">
                 <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Codigo</a>
+                <a href="#contato" class="btn">Código</a>
             </div>
         </div>
 
         <div class="project">
-            <img src="images/xxx.jpeg" alt="Projeto 1">
-            <p class="project-title"><a href="">Projeto 1</a></p>
-            <p>Descrição do Projeto 1.</p>
-            <div class="proj">
+            <img src="images/xxx.jpeg" alt="Projeto 3">
+            <p class="project-title"><a href="#">Projeto 3</a></p>
+            <p>Descrição do Projeto 3.</p>
+            <div class="project-buttons">
                 <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Codigo</a>
+                <a href="#contato" class="btn">Código</a>
             </div>
         </div>
-        
+
+        <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 3">
+            <p class="project-title"><a href="#">Projeto 3</a></p>
+            <p>Descrição do Projeto 3.</p>
+            <div class="project-buttons">
+                <a href="#contato" class="btn">Abrir</a>
+                <a href="#contato" class="btn">Código</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 3">
+            <p class="project-title"><a href="#">Projeto 3</a></p>
+            <p>Descrição do Projeto 3.</p>
+            <div class="project-buttons">
+                <a href="#contato" class="btn">Abrir</a>
+                <a href="#contato" class="btn">Código</a>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 3">
+            <p class="project-title"><a href="#">Projeto 3</a></p>
+            <p>Descrição do Projeto 3.</p>
+            <div class="project-buttons">
+                <a href="#contato" class="btn">Abrir</a>
+                <a href="#contato" class="btn">Código</a>
+            </div>
+        </div> -->
     </div>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyrigh &copy; 2023 by Mateus Izaias | All Rights Reserved</p>
+            <!-- <span class="animate scroll" style="--i:1;"></span> -->
+        </div>
+
+    </footer>
 </body>
 
 </html>
