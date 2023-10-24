@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Projetos</title>
-    
+
     <link rel="shortcut icon" href="fav-proj.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sobre.css">
@@ -42,6 +42,7 @@
         /* justify-content: space-between; */
     }
 
+
     p {
         font-size: 1.6rem;
         padding-top: 0.5rem;
@@ -55,6 +56,7 @@
         background-color: var(--bg-color);
         display: inline-block;
         text-align: center;
+        /* width: 350px; */
     }
 
     .project img {
@@ -75,19 +77,10 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 10px;
+        width: 30rem;
     }
 
-    .project-buttons .btn {
-        padding: 10px 20px;
-        background-color: var(--main-color);
-        border: 0.2rem solid var(--main-color);
-        border-radius: 0.8rem;
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: var(--bg-color);
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-    }
+   
 
     .project-buttons .btn:hover {
         background-color: var(--bg-color);
@@ -98,6 +91,35 @@
         width: 100%;
         text-align: center;
     }
+
+    #mais1,
+    #mais2,
+    #mais3,
+    #mais4,
+    #mais5 {
+        display: none;
+        color: var(--text-color);
+    }
+
+    .btnLeiaMais,
+    .project-buttons .btn {
+        padding: 5px 10px;
+        background-color: var(--main-color);
+        border: 0.2rem solid var(--main-color);
+        border-radius: 0.8rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--bg-color);
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+
+    .btnLeiaMais:hover {
+        background-color: var(--bg-color);
+        color: var(--main-color);
+    }  
+
 </style>
 
 <body>
@@ -107,69 +129,32 @@
         <div class="project">
             <img src="images/xxx.jpeg" alt="Projeto 1">
             <p class="project-title"><a href="#">Projeto 1</a></p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum repellendus officia, temporibus quasi,
+            <p class="project-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum repellendus officia, temporibus quasi,
                 laboriosam architecto unde debitis quaerat voluptatibus obcaecati at, dolorum ab iure iste officiis
-                dolores tempora inventore. Nostrum velit eius quaerat. Beatae, dicta!</p>
+                dolores tempora inventore. Nostrum velit eius quaerat. Beatae, dicta! <span id="pontos1">...</span>
+                <span id="mais1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia dolore natus, dolor
+                    aperiam
+                    reprehenderit veritatis iste saepe omnis consectetur! Error enim maiores odit labore ab voluptatem
+                    quos,
+                    eveniet dolorem quia placeat? Magni, in inventore incidunt magnam voluptatibus accusantium libero
+                    est
+                    fugit eveniet corrupti harum reprehenderit aperiam animi totam quia recusandae?</span>
+            </p>
+        
             <div class="project-buttons">
                 <a href="#contato" class="btn">Abrir</a>
                 <a href="#contato" class="btn">Código</a>
+                <button onclick="leiaMais(1)" id="btnLeiaMais1" class="btnLeiaMais">Ler Mais</button>
+
             </div>
         </div>
+        
 
-        <div class="project">
-            <img src="images/xxx.jpeg" alt="Projeto 2">
-            <p class="project-title"><a href="#">Projeto 2</a></p>
-            <p>Descrição do Projeto 2.</p>
-            <div class="project-buttons">
-                <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Código</a>
-            </div>
-        </div>
-
-        <div class="project">
-            <img src="images/xxx.jpeg" alt="Projeto 3">
-            <p class="project-title"><a href="#">Projeto 3</a></p>
-            <p>Descrição do Projeto 3.</p>
-            <div class="project-buttons">
-                <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Código</a>
-            </div>
-        </div>
-
-        <div class="project">
-            <img src="images/xxx.jpeg" alt="Projeto 3">
-            <p class="project-title"><a href="#">Projeto 3</a></p>
-            <p>Descrição do Projeto 3.</p>
-            <div class="project-buttons">
-                <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Código</a>
-            </div>
-        </div>
-
-        <div class="project">
-            <img src="images/xxx.jpeg" alt="Projeto 3">
-            <p class="project-title"><a href="#">Projeto 3</a></p>
-            <p>Descrição do Projeto 3.</p>
-            <div class="project-buttons">
-                <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Código</a>
-            </div>
-        </div>
+       
+        
 
 
-
-
-
-
-        <!-- <div class="project">
-            <img src="images/xxx.jpeg" alt="Projeto 3">
-            <p class="project-title"><a href="#">Projeto 3</a></p>
-            <p>Descrição do Projeto 3.</p>
-            <div class="project-buttons">
-                <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Código</a>
-            </div>
-        </div> -->
     </div>
 
     <footer class="footer">
@@ -178,12 +163,13 @@
         </div>
 
         <div class="footer-iconTop">
-           <a href="https://www.linkedin.com/in/mateus-izaias" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.linkedin.com/in/mateus-izaias" target="_blank"><i class='bx bxl-linkedin'></i></a>
             <a href="https://github.com/Teus369" target="_blank"><i class='bx bxl-github'></i></a>
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
-    
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
