@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -23,12 +23,7 @@
         --main-color: #00abf0;
     }
 
-    body {
-        text-align: center;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        margin: 20px;
-    }
+    
 
     .containe {
         max-width: 866px;
@@ -39,6 +34,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         display: flex;
         flex-wrap: wrap;
+        margin: 70px auto 30px;
         /* justify-content: space-between; */
     }
 
@@ -62,6 +58,7 @@
     .project img {
         width: 26vh;
         border-radius: 5px;
+        animation: about;
     }
 
     .project-title a {
@@ -120,9 +117,26 @@
         color: var(--main-color);
     }  
 
+    
+    
+
 </style>
 
 <body>
+
+    <header class="header">
+        <a href="index.html" class="logo">mateus<span class="animate" style="--i:1;"></span></a>
+        <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Início</a>
+            <a href="curriculo-mateus izaias.pdf" download>Currículo .pdf <i class='bx bx-download'></i></a>
+            <span class="active-nav"></span>
+            <span class="animate" style="--i:2;"></span>
+        </nav>
+    </header>
+
+    
     <div class="containe">
         <h2 class="heading">Meus <span>Projetos</span></h2>
 
@@ -141,7 +155,6 @@
                     est
                     fugit eveniet corrupti harum reprehenderit aperiam animi totam quia recusandae?</span>
             </p>
-        
             <div class="project-buttons">
                 <a href="#contato" class="btn">Abrir</a>
                 <a href="#contato" class="btn">Código</a>
@@ -150,23 +163,46 @@
             </div>
         </div>
         
+        <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 1">
+            <p class="project-title"><a href="#">Projeto 1</a></p>
+            <p class="project-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum repellendus officia, temporibus quasi,
+                laboriosam architecto unde debitis quaerat voluptatibus obcaecati at, dolorum ab iure iste officiis
+                dolores tempora inventore. Nostrum velit eius quaerat. Beatae, dicta! <span id="pontos1">...</span>
+                <span id="mais1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia dolore natus, dolor
+                    aperiam
+                    reprehenderit veritatis iste saepe omnis consectetur! Error enim maiores odit labore ab voluptatem
+                    quos,
+                    eveniet dolorem quia placeat? Magni, in inventore incidunt magnam voluptatibus accusantium libero
+                    est
+                    fugit eveniet corrupti harum reprehenderit aperiam animi totam quia recusandae?</span>
+            </p>
+            <div class="project-buttons">
+                <a href="#contato" class="btn">Abrir</a>
+                <a href="#contato" class="btn">Código</a>
+                <button onclick="leiaMais(1)" id="btnLeiaMais1" class="btnLeiaMais">Ler Mais</button>
 
-       
+            </div>
+        </div>
+
         
-
-
+       
     </div>
 
     <footer class="footer">
         <div class="footer-text">
             <p>Copyrigh &copy; 2023 by Mateus Izaias | All Rights Reserved</p>
+            <span class="animate scroll" style="--i:1;"></span>
         </div>
 
         <div class="footer-iconTop">
-            <a href="https://www.linkedin.com/in/mateus-izaias" target="_blank"><i class='bx bxl-linkedin'></i></a>
+           <a href="https://www.linkedin.com/in/mateus-izaias" target="_blank"><i class='bx bxl-linkedin'></i></a>
             <a href="https://github.com/Teus369" target="_blank"><i class='bx bxl-github'></i></a>
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+            <span class="animate scroll" style="--i:3;"></span>
         </div>
+    
     </footer>
 
     <script src="js/script.js"></script>
