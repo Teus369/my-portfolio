@@ -15,6 +15,36 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
+<style>
+    #mais1,
+    #mais2,
+    #mais3,
+    #mais4,
+    #mais5 {
+        display: none;
+        color: var(--text-color);
+    }
+
+    .btnLeiaMais,
+    .project-buttons .btn {
+        padding: 5px 10px;
+        background-color: var(--main-color);
+        border: 0.2rem solid var(--main-color);
+        border-radius: 0.8rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--bg-color);
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+
+    .btnLeiaMais:hover {
+        background-color: var(--bg-color);
+        color: var(--main-color);
+    }
+</style>
+
 <body>
     <!-- header design -->
     <header class="header">
@@ -129,17 +159,33 @@
                         <div class="content">
                             <div class="year"><i class='bx bxs-calendar'></i>10/2022 - Atual</div>
                             <h3>Aprendiz Tech - Telefônica/Vivo</h3>
-                            <p> Minhas responsabilidades incluem conferir chamados, monitorar aplicações críticas da
-                                empresa e apoiar os analistas em suas tarefas diárias.</p>
+                            <p> Durante meu período como Aprendiz Tech Vivo, tive o privilégio de contribuir para a
+                                <span id="pontos4">...</span>
+                                <span id="mais4">
+                                equipe do Command Center - Gestão de incidentes que me proporcionou a oportunidade de
+                                adquiri valiosas habilidades técnicas, conhecimento e experiência prática, além de
+                                demonstrar dedicação à excelência em minhas tarefas diarias tudo isso aprendendo com
+                                profissionais talentosos da vivo.</p>
+                                <button onclick="leiaMais(4)" id="btnLeiaMais4" class="btnLeiaMais">Ler Mais</button>
+
                         </div>
                     </div>
                     <div class="education-content">
                         <div class="content">
                             <div class="year"><i class='bx bxs-calendar'></i>12/2020 - 09/2022</div>
-                            <h3>Web Developer - company</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est nihil iure et magni ullam
-                                eaque, natus suscipit obcaecati cumque nesciunt.</p>
+                            <h3>Supervisor de Operações - Burger King</h3>
+                            <p>Como Supervisor de Operações no Burger King, tive a oportunidade de desempenhar um papel
+                                <span id="pontos5">...</span>
+                                <span id="mais5">
+                                    fundamental na gestão eficiente de um restaurante treinador da franquia. Minhas
+                                    responsabilidades
+                                    abrangiam diversas áreas, desde o gerenciamento de equipe até o controle de
+                                    qualidade e a administração financeira.</span>
+                            </p>
+                            <button onclick="leiaMais(5)" id="btnLeiaMais5" class="btnLeiaMais">Ler Mais</button>
+
                         </div>
+
                     </div>
                     <!-- <div class="education-content">
                         <div class="content">
@@ -259,12 +305,12 @@
         </div>
 
         <div class="footer-iconTop">
-           <a href="https://www.linkedin.com/in/mateus-izaias" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.linkedin.com/in/mateus-izaias" target="_blank"><i class='bx bxl-linkedin'></i></a>
             <a href="https://github.com/Teus369" target="_blank"><i class='bx bxl-github'></i></a>
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
             <span class="animate scroll" style="--i:3;"></span>
         </div>
-    
+
     </footer>
     <script src="js/script.js"></script>
 </body>
