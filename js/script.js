@@ -78,38 +78,21 @@ window.onscroll = () => {
 
 _______________________
 
-// function leiaMais () {
-//     var pontos=document.getElementById("pontos");
-//     var maisTexto=document.getElementById("mais");
-//     var btnLeiaMais=document.getElementById("btnLeiaMais");
+// function leiaMais(numero) {
+//     var pontos = document.getElementById("pontos" + numero);
+//     var maisTexto = document.getElementById("mais" + numero);
+//     var btnLeiaMais = document.getElementById("btnLeiaMais" + numero);
 
-//     if(pontos.style.display === "none") { 
-//         pontos.style.display="inline";
-//         maisTexto.style.display="none";
-//         btnLeiaMais.innerHTML="Leia Mais";
-//     }else{
-//         pontos.style.display="none";
-//         maisTexto.style.display="inline";
-//         btnLeiaMais.innerHTML="Leia Menos";
+//     if (pontos.style.display === "none") {
+//         pontos.style.display = "inline";
+//         maisTexto.style.display = "none";
+//         btnLeiaMais.innerHTML = "Ler Mais";
+//     } else {
+//         pontos.style.display = "none";
+//         maisTexto.style.display = "inline";
+//         btnLeiaMais.innerHTML = "Ler Menos";
 //     }
-
 // }
-
-function leiaMais(numero) {
-    var pontos = document.getElementById("pontos" + numero);
-    var maisTexto = document.getElementById("mais" + numero);
-    var btnLeiaMais = document.getElementById("btnLeiaMais" + numero);
-
-    if (pontos.style.display === "none") {
-        pontos.style.display = "inline";
-        maisTexto.style.display = "none";
-        btnLeiaMais.innerHTML = "Ler Mais";
-    } else {
-        pontos.style.display = "none";
-        maisTexto.style.display = "inline";
-        btnLeiaMais.innerHTML = "Ler Menos";
-    }
-}
 
 
 

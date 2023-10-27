@@ -23,8 +23,6 @@
         --main-color: #00abf0;
     }
 
-    
-
     .containe {
         max-width: 866px;
         margin: 10px auto;
@@ -34,10 +32,8 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         display: flex;
         flex-wrap: wrap;
-        margin: 70px auto 30px;
         /* justify-content: space-between; */
     }
-
 
     p {
         font-size: 1.6rem;
@@ -45,7 +41,7 @@
     }
 
     .project {
-        margin: 20px;
+        margin: 10px;
         padding: 1.5rem;
         border: .2rem solid var(--main-color);
         border-radius: 0.6rem;
@@ -59,6 +55,12 @@
         width: 26vh;
         border-radius: 5px;
         animation: about;
+        transition: transform 0.3s;
+    }
+
+    .project img:hover {
+        transform: scale(1.1);
+        /* Aumenta a escala da imagem em 10% ao passar o mouse */
     }
 
     .project-title a {
@@ -76,8 +78,6 @@
         margin-top: 10px;
         width: 30rem;
     }
-
-   
 
     .project-buttons .btn:hover {
         background-color: var(--bg-color);
@@ -111,15 +111,14 @@
         transition: background-color 0.3s, color 0.3s;
     }
 
-
     .btnLeiaMais:hover {
         background-color: var(--bg-color);
         color: var(--main-color);
-    }  
+    }
 
-    
-    
-
+    .bold {
+        font-weight: bolder;
+    }
 </style>
 
 <body>
@@ -136,58 +135,151 @@
         </nav>
     </header>
 
-    
     <div class="containe">
         <h2 class="heading">Meus <span>Projetos</span></h2>
 
+        <!-- prjeto 1 -->
         <div class="project">
-            <img src="images/xxx.jpeg" alt="Projeto 1">
-            <p class="project-title"><a href="#">Projeto 1</a></p>
-            <p class="project-description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum repellendus officia, temporibus quasi,
-                laboriosam architecto unde debitis quaerat voluptatibus obcaecati at, dolorum ab iure iste officiis
-                dolores tempora inventore. Nostrum velit eius quaerat. Beatae, dicta! <span id="pontos1">...</span>
-                <span id="mais1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia dolore natus, dolor
-                    aperiam
-                    reprehenderit veritatis iste saepe omnis consectetur! Error enim maiores odit labore ab voluptatem
-                    quos,
-                    eveniet dolorem quia placeat? Magni, in inventore incidunt magnam voluptatibus accusantium libero
-                    est
-                    fugit eveniet corrupti harum reprehenderit aperiam animi totam quia recusandae?</span>
+            <img src="images/project-001.png" alt="Projeto 1">
+            <img src="images/project-002.png" alt="Projeto 1">
+            <img src="images/project-004.png" alt="Projeto 1">
+            <p class="project-title"><a href="#">Desenvolvimento do Site da Operadora de Internet na Gama Academy</a>
             </p>
-            <div class="project-buttons">
-                <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Código</a>
-                <button onclick="leiaMais(1)" id="btnLeiaMais1" class="btnLeiaMais">Ler Mais</button>
+            <p class="project-description">
+                Durante meu curso na Gama Academy, participei de um desafiador projeto de
+                equipe onde criamos um site para um provedor de internet fictício. Este projeto envolveu a aplicação de
+                nossas habilidades de design e desenvolvimento e colaboração eficaz para atingir objetivos específicos.
+                <span id="pontos1">...</span> <span id="mais1">
+                    <br><br>
+                    Minha função: <br>
+                    Como membro da equipe, desempenhei um papel fundamental no desenvolvimento do site, sendo
+                    responsável por criar elementos visuais impactantes, otimizar o conteúdo web e garantir a capacidade
+                    de resposta do site em diferentes dispositivos.
+                    <br><br>
+                    Desafios e Soluções: <br>
+                    Encontramos vários desafios, como selecionar uma paleta de cores atraente e implementar recursos
+                    interativos. Trabalhamos diligentemente para superar esses obstáculos por meio de pesquisa completa
+                    e design iterativo.
+                    <br><br>
+                    Este projeto proporcionou valiosa experiência em web design, desenvolvimento e trabalho em equipe,
+                    enfatizando o equilíbrio entre estética e funcionalidade. Isso melhorou minhas habilidades de
+                    resolução de problemas.
 
-            </div>
-        </div>
-        
-        <div class="project">
-            <img src="images/xxx.jpeg" alt="Projeto 1">
-            <p class="project-title"><a href="#">Projeto 1</a></p>
-            <p class="project-description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum repellendus officia, temporibus quasi,
-                laboriosam architecto unde debitis quaerat voluptatibus obcaecati at, dolorum ab iure iste officiis
-                dolores tempora inventore. Nostrum velit eius quaerat. Beatae, dicta! <span id="pontos1">...</span>
-                <span id="mais1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia dolore natus, dolor
-                    aperiam
-                    reprehenderit veritatis iste saepe omnis consectetur! Error enim maiores odit labore ab voluptatem
-                    quos,
-                    eveniet dolorem quia placeat? Magni, in inventore incidunt magnam voluptatibus accusantium libero
-                    est
-                    fugit eveniet corrupti harum reprehenderit aperiam animi totam quia recusandae?</span>
+
+                </span>
             </p>
             <div class="project-buttons">
-                <a href="#contato" class="btn">Abrir</a>
-                <a href="#contato" class="btn">Código</a>
+                <a href="https://telefonemochileiro.github.io/projeto-integrador-equipe-4/" target="_blank"
+                    class="btn">Abrir</a>
+                <a href="https://github.com/TelefoneMochileiro/projeto-integrador-equipe-4" target="_blank"
+                    class="btn">Código</a>
                 <button onclick="leiaMais(1)" id="btnLeiaMais1" class="btnLeiaMais">Ler Mais</button>
 
             </div>
         </div>
 
+        <!-- prjeto 2 -->
+        <div class="project">
+            <img src="images/project-005.png" alt="Projeto 2">
+            <img src="images/project-006.png" alt="Projeto 2">
+            <img src="images/project-003.png" alt="Projeto 2">
+            <p class="project-title"><a href="#">Projeto do Site de Receitas (omma)</a></p>
+            <p class="project-description">
+                O projeto que desenvolvi durante o meu curso na Gama Academy, um site de receitas que me permitiu
+                aplicar diversas habilidades e conceitos que aprendi ao longo do programa. Este projeto foi uma
+                oportunidade emocionante de colocar em prática o conhecimento adquirido.
+                <span id="pontos2">...</span> <span id="mais2">
+                    <br><br>
+                    Objetivos do Projeto: <br>
+                    No início, nosso principal objetivo era criar um site de receitas que fosse amigável ao usuário,
+                    informativo e visualmente atraente. Além disso, queríamos demonstrar a capacidade de aplicar
+                    tecnologias web em um contexto real.
+                    <br><br>
+                    Design e Layout: <br>
+                    Optei por um design simples e limpo, com cores suaves que destacavam as imagens das receitas. O
+                    layout foi projetado para ser responsivo, garantindo uma boa experiência do usuário em dispositivos
+                    móveis.
+                    <br><br>
+                    Funcionalidades: <br>
+                    O site oferece funcionalidades como, categorização, exibição de imagens,
+                    detalhes das receitas e um sistema de comentários. Os usuários podem navegar, pesquisar e interagir
+                    facilmente com as receitas.
+                    <br><br>
+                    o projeto do site de receitas da Gama Academy foi uma experiência enriquecedora que me permitiu
+                    aplicar e aprimorar minhas habilidades. Serviu como um lembrete constante do valor do aprendizado
+                    prático. Estou ansioso para continuar trabalhando em projetos desafiadores e expandir meu
+                    conhecimento em desenvolvimento web.
+                </span>
+            </p>
+            <div class="project-buttons">
+                <a href="https://teus369.github.io/projeto-omma/index.html" target="_blank" class="btn">Abrir</a>
+                <a href="https://github.com/Teus369/projeto-omma" target="_blank" class="btn">Código</a>
+                <button onclick="leiaMais(2)" id="btnLeiaMais2" class="btnLeiaMais">Ler Mais</button>
+
+            </div>
+        </div>
+
+        <!-- prjeto 3 -->
+        <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 3">
+            <img src="images/xxx.jpeg" alt="Projeto 3">
+            <img src="images/xxx.jpeg" alt="Projeto 3">
+            <p class="project-title"><a href="#">Projeto 1</a></p>
+            <p class="project-description">
+                 
+
+                <span id="pontos2">...</span> <span id="mais2">
+                    
+
+                </span></p>
+            <div class="project-buttons">
+                <a href="#contato" target="_blank" class="btn">Abrir</a>
+                <a href="#contato" target="_blank" class="btn">Código</a>
+                <button onclick="leiaMais(2)" id="btnLeiaMais2" class="btnLeiaMais">Ler Mais</button>
+
+            </div>
+        </div>
+
+        <!-- prjeto 4 -->
+        <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 4">
+            <img src="images/xxx.jpeg" alt="Projeto 4">
+            <img src="images/xxx.jpeg" alt="Projeto 4">
+            <p class="project-title"><a href="#">Projeto 1</a></p>
+            <p class="project-description">
+                 
+
+                <span id="pontos2">...</span> <span id="mais2">
+                    
+
+                </span></p>
+            <div class="project-buttons">
+                <a href="#contato" target="_blank" class="btn">Abrir</a>
+                <a href="#contato" target="_blank" class="btn">Código</a>
+                <button onclick="leiaMais(2)" id="btnLeiaMais2" class="btnLeiaMais">Ler Mais</button>
+
+            </div>
+        </div>
         
-       
+        
+        <!-- <div class="project">
+            <img src="images/xxx.jpeg" alt="Projeto 1">
+            <p class="project-title"><a href="#">Projeto 1</a></p>
+            <p class="project-description">
+                 
+
+                <span id="pontos2">...</span> <span id="mais2">
+                    
+
+                </span></p>
+            <div class="project-buttons">
+                <a href="#contato" target="_blank" class="btn">Abrir</a>
+                <a href="#contato" target="_blank" class="btn">Código</a>
+                <button onclick="leiaMais(2)" id="btnLeiaMais2" class="btnLeiaMais">Ler Mais</button>
+
+            </div>
+        </div> -->
+
     </div>
 
     <footer class="footer">
@@ -197,13 +289,32 @@
         </div>
 
         <div class="footer-iconTop">
-           <a href="https://www.linkedin.com/in/mateus-izaias" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.linkedin.com/in/mateus-izaias" target="_blank"><i class='bx bxl-linkedin'></i></a>
             <a href="https://github.com/Teus369" target="_blank"><i class='bx bxl-github'></i></a>
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
             <span class="animate scroll" style="--i:3;"></span>
         </div>
-    
+
     </footer>
+
+    <script>
+        function leiaMais(numero) {
+            var pontos = document.getElementById("pontos" + numero);
+            var maisTexto = document.getElementById("mais" + numero);
+            var btnLeiaMais = document.getElementById("btnLeiaMais" + numero);
+
+            if (pontos.style.display === "none") {
+                pontos.style.display = "inline";
+                maisTexto.style.display = "none";
+                btnLeiaMais.innerHTML = "Ler Mais";
+            } else {
+                pontos.style.display = "none";
+                maisTexto.style.display = "inline";
+                btnLeiaMais.innerHTML = "Ler Menos";
+            }
+        }
+
+    </script>
 
     <script src="js/script.js"></script>
 </body>
