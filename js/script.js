@@ -73,26 +73,45 @@ window.onscroll = () => {
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 };
 
+// ________________________________________________________________________________________________________________________________
 
+function leiaMais(numero) {
+    var pontos = document.getElementById("pontos" + numero);
+    var maisTexto = document.getElementById("mais" + numero);
+    var btnLeiaMais = document.getElementById("btnLeiaMais" + numero);
 
+    if (pontos.style.display === "none") {
+        pontos.style.display = "inline";
+        maisTexto.style.display = "none";
+        btnLeiaMais.innerHTML = "Ler Mais";
+    } else {
+        pontos.style.display = "none";
+        maisTexto.style.display = "inline";
+        btnLeiaMais.innerHTML = "Ler Menos";
+    }
+}
 
-_______________________
+// ________________________________________________________________________________________________________________________________
 
-// function leiaMais(numero) {
-//     var pontos = document.getElementById("pontos" + numero);
-//     var maisTexto = document.getElementById("mais" + numero);
-//     var btnLeiaMais = document.getElementById("btnLeiaMais" + numero);
+const carousels = document.querySelectorAll('.carousel-container');
+const buttons = document.querySelectorAll('.carousel-button');
+const items = carousels[0].querySelectorAll('.carousel-item');
+let currentIndex = 0;
 
-//     if (pontos.style.display === "none") {
-//         pontos.style.display = "inline";
-//         maisTexto.style.display = "none";
-//         btnLeiaMais.innerHTML = "Ler Mais";
-//     } else {
-//         pontos.style.display = "none";
-//         maisTexto.style.display = "inline";
-//         btnLeiaMais.innerHTML = "Ler Menos";
-//     }
-// }
+function nextSlide(index) {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel(index);
+}
 
+function prevSlide(index) {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel(index);
+}
 
+function updateCarousel(index) {
+    const offset = -currentIndex * 300;
+    carousels[index].style.transform = `translateX(${offset}px)`;
+}
+
+// ________________________________________________________________________________________________________________________________
 

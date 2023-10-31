@@ -1,0 +1,133 @@
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+.projetos {
+    min-height: 100vh;
+    padding: 10rem 15% 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+p {
+    font-size: 1.6rem;
+    padding-top: 0.5rem;
+}
+
+.project {
+    margin: 20px;
+padding: 1.5rem;
+border: .2rem solid var(--main-color);
+border-radius: 0.6rem;
+background-color: var(--bg-color);
+display: block;
+text-align: center;
+width: 585px;
+position: relative;
+}
+
+
+.project img {
+    width: 35vh;
+    border-radius: 5px;
+    animation: about;
+    transition: transform 0.3s;
+    height: auto;
+}
+
+.project img:hover {
+    transform: scale(1.1);
+    /* Aumenta a escala da imagem em 10% ao passar o mouse */
+}
+
+
+.project-title a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.carousel-button,
+.project-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 37rem;
+}
+
+.carousel-button,
+.project-buttons .btn:hover {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}
+
+h2.heading {
+    width: 100%;
+    text-align: center;
+}
+
+#mais1,
+#mais2,
+#mais3,
+#mais4,
+#mais5 {
+    display: none;
+    color: var(--text-color);
+}
+
+.carousel-button,
+.btnLeiaMais,
+.project-buttons .btn {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    border: 0.2rem solid var(--main-color);
+    border-radius: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-button:hover,
+.btnLeiaMais:hover {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+
+.carousel {
+width: 300px;
+overflow: hidden;
+position: relative;
+margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 300px;
+    flex-shrink: 0;
+    align-items: center;
+
+}
+
+ .carousel-button {
+    width: unset;
+    display: inline;
+    margin: 10px;
+}

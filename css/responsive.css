@@ -113,6 +113,9 @@
         width: 2.375em;
         height: 2.375em;
     }
+
+ 
+    
 }
 
 @media (max-width: 462px) {
@@ -153,4 +156,6 @@
     .home-content h1 {
         font-size: 5rem;
     }
+  
+    
 }

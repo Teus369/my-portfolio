@@ -297,6 +297,7 @@
 
         </form>
     </section>
+    
     <!-- footer design -->
     <footer class="footer">
         <div class="footer-text">
@@ -312,6 +313,24 @@
         </div>
 
     </footer>
+    <script>
+        function leiaMais(numero) {
+            var pontos = document.getElementById("pontos" + numero);
+            var maisTexto = document.getElementById("mais" + numero);
+            var btnLeiaMais = document.getElementById("btnLeiaMais" + numero);
+
+            if (pontos.style.display === "none") {
+                pontos.style.display = "inline";
+                maisTexto.style.display = "none";
+                btnLeiaMais.innerHTML = "Ler Mais";
+            } else {
+                pontos.style.display = "none";
+                maisTexto.style.display = "inline";
+                btnLeiaMais.innerHTML = "Ler Menos";
+            }
+        }
+
+    </script>
     <script src="js/script.js"></script>
 </body>
 
