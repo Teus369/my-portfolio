@@ -20,14 +20,14 @@ p {
 
 .project {
     margin: 20px;
-padding: 1.5rem;
-border: .2rem solid var(--main-color);
-border-radius: 0.6rem;
-background-color: var(--bg-color);
-display: block;
-text-align: center;
-width: 451px;
-position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 0.6rem;
+    background-color: var(--bg-color);
+    display: block;
+    text-align: center;
+    width: 310px;
+    position: relative;
 }
 
 
@@ -108,10 +108,11 @@ h2.heading {
 
 
 .carousel {
-width: 300px;
-overflow: hidden;
-position: relative;
-margin: 0 auto; /* Centraliza horizontalmente */
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
 }
 
 .carousel-container {
@@ -120,14 +121,184 @@ margin: 0 auto; /* Centraliza horizontalmente */
 }
 
 .carousel-item {
-    width: 300px;
+    width: 100%;
     flex-shrink: 0;
     align-items: center;
 
 }
 
- .carousel-button {
+.carousel-button {
     width: unset;
     display: inline;
     margin: 10px;
+}
+
+
+@media (max-width: 1200px) {
+
+    .project {
+        width: 380px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .projetos {
+        padding: 9rem 10% 3rem;
+    }
+
+    .project {
+        width: 354px;
+    }
+
+    .carousel-button,
+    .project-buttons {
+        width: 35rem;
+    }
+
+    .carousel-button {
+        width: unset;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .projetos {
+        padding: 9rem 5% 2rem;
+    }
+
+    .project {
+        width: 340px;
+    }
+
+    .carousel-button,
+    .project-buttons {
+        width: 35rem;
+    }
+
+    .carousel-button {
+        margin: 6px;
+        width: 15rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .projetos {
+        padding: 9rem 3% 2rem;
+    }
+
+    .project {
+        padding: 1rem;
+        width: 313px;
+    }
+
+    .carousel-button,
+    .project-buttons {
+        width: 32.5rem;
+    }
+
+    .carousel-button {
+        margin: 2px;
+    }
+
+    .carousel-button,
+    .btnLeiaMais,
+    .project-buttons .btn {
+        padding: 5px 8px;
+    }
+
+    .carousel-button, .btnLeiaMais, .project-buttons .btn {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 644px) {
+    .project {
+        width: 560px;
+    }
+
+    .carousel-button {
+        width: 28rem;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .projetos {
+        padding: 8rem 3% 3rem;
+    }
+
+    .project {
+        width: 455px;
+        margin: 13px;
+    }
+
+}
+
+@media (max-width: 462px) {
+    .projetos {
+        padding: 8rem 6% 3rem;
+    }
+
+    .project {
+        width: 362px;
+        margin: 13px;
+    }
+
+    p {
+        font-size: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .project-title a {
+        font-size: 2.3rem;
+    }
+
+    .carousel-button,
+    .btnLeiaMais,
+    .project-buttons .btn {
+        font-size: 2rem;
+    }
+
+    .carousel-button,
+    .project-buttons {
+        width: 41rem;
+    }
+
+    .project img {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 371px) {
+    .projetos {
+        padding: 9rem 1% 3rem;
+    }
+
+    .project {
+        width: 330px;
+    }
+
+    .carousel-button,
+    .project-buttons {
+        width: 37rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        padding-top: 0.5rem;
+    }
+
+    .carousel-button,
+    .btnLeiaMais,
+    .project-buttons .btn {
+        font-size: 1.8rem;
+    }
 }
