@@ -7,7 +7,7 @@
 
 .projetos {
     min-height: 100vh;
-    padding: 10rem 15% 2rem;
+    padding: 10rem 11% 2rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -26,7 +26,7 @@ p {
     background-color: var(--bg-color);
     display: block;
     text-align: center;
-    width: 310px;
+    width: 447px;
     position: relative;
 }
 
@@ -144,7 +144,7 @@ h2.heading {
 @media (max-width: 991px) {
 
     .projetos {
-        padding: 9rem 10% 3rem;
+        padding: 9rem 5% 3rem;
     }
 
     .project {
@@ -190,12 +190,12 @@ h2.heading {
 @media (max-width: 768px) {
 
     .projetos {
-        padding: 9rem 3% 2rem;
+        padding: 9rem 8% 2rem;
     }
 
     .project {
         padding: 1rem;
-        width: 313px;
+        width: 508px;
     }
 
     .carousel-button,
@@ -275,6 +275,43 @@ h2.heading {
         width: 100%;
     }
 
+}
+
+@media (max-width: 462px) {
+    .project {
+        width: 358px;
+    }
+
+    .carousel-button, .project-buttons {
+        width: 38rem;
+    }
+
+    .carousel-button, .btnLeiaMais, .project-buttons .btn {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .project {
+        width: 321px;
+    }
+
+    .projetos {
+        padding: 8rem 3% 3rem;
+    }
+
+    .carousel-button, .project-buttons {
+        width: 36rem;
+    }
+
+    .carousel-button, .btnLeiaMais, .project-buttons .btn {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 371px) {
