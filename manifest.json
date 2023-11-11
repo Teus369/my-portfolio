@@ -1,15 +1,21 @@
 {
-    "name": "Nome da Sua Aplicação",
-    "short_name": "Nome Curto",
+    "name": "Portifolio do Mateus izaias",
+    "short_name": "Portifolio",
     "description": "Descrição da Sua Aplicação",
     "start_url": "/index.html", 
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#000000",
+    "background_color": "#081b29",
+    "theme_color": "#081b29",
+    "orientation": "any",
     "icons": [
       {
-        "src": "/path/to/icon.png",
-        "sizes": "192x192",
+        "src": "fav-ini.png",
+        "sizes": "92x92",
+        "type": "image/png"
+      },
+      {
+        "src": "fav-ini32.png",
+        "sizes": "32x32",
         "type": "image/png"
       }
     ]
