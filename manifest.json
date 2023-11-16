@@ -6,19 +6,19 @@
     "display": "standalone",
     "background_color": "#081b29",
     "theme_color": "#081b29",
-    "orientation": "any",
+    "orientation": "any maskable",
     "icons": [
       {
         "src": "fav-ini256.png",
         "sizes": "256x256",
         "type": "image/png",
-        "purpose": "any"
+        "purpose": "any maskable"
       },
       {
         "src": "fav-ini512.png",
         "sizes": "512x512",
         "type": "image/png",
-        "purpose": "any"
+        "purpose": "any maskable"
       }
         ]
   }
