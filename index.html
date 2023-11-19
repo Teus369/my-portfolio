@@ -258,7 +258,8 @@
     <!-- contact section design -->
     <section class="contact" id="contato">
         <h2 class="heading">Contate <span>Me!</span></h2>
-        <form action="https://formsubmit.co/mateusizaias369@gmail.com" method="post">
+        <form method="post" action="./php/envia.php">
+
             <div class="imput-box">
 
                 <div class="imput-field">
@@ -283,7 +284,7 @@
                 </div>
 
                 <div class="imput-field">
-                    <input type="text" name="_subject" required autocomplete="off">
+                    <input type="text" name="subject" required autocomplete="off">
                     <label class="form_label">Assunto do Email</label>
                     <span class="focus"></span>
                 </div>
@@ -300,8 +301,6 @@
                 <button type="submit" class="btn">Enviar</button>
             </div>
             
-            <input type="hidden" name="_next" value="https://teus369.github.io/my-portfolio/obrigado.html">
-            <input type="hidden" name="_autoresponse" value="sua mensagem personalizada">
         </form>
     </section>
     
