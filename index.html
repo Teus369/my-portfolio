@@ -256,20 +256,19 @@
     </section>
 
     <!-- contact section design -->
-    <!-- contact section design -->
 <section class="contact" id="contato">
 	<h2 class="heading">Contate <span>Me!</span></h2>
-	<form action="https://formsubmit.co/mateusizaias369@gmail.com" method="post">
+	<form action="./php/envia.php" method="post">
 		<div class="imput-box">
 
 			<div class="imput-field">
-				<input type="text" name="nome" required autocomplete="off">
+				<input type="text" class="input" name="nome" required autocomplete="off">
 				<label class="form_label">Nome</label>
 				<span class="focus"></span>
 			</div>
 
 			<div class="imput-field">
-				<input type="email" name="email" required>
+				<input type="email" class="input" name="email" required>
 				<label class="form_label">Email</label>
 				<span class="focus"></span>
 			</div>
@@ -278,13 +277,13 @@
 		<div class="imput-box">
 
 			<div class="imput-field">
-				<input type="number" name="telefone" required autocomplete="off">
+				<input type="number" class="input" name="telefone" required autocomplete="off">
 				<label class="form_label">Telefone</label>
 				<span class="focus"></span>
 			</div>
 
 			<div class="imput-field">
-				<input type="text" name="_subject" required autocomplete="off">
+				<input type="text" class="input" name="_subject" required autocomplete="off">
 				<label class="form_label">Assunto do Email</label>
 				<span class="focus"></span>
 			</div>
@@ -292,17 +291,15 @@
 		</div>
 
 		<div class="textarea-field">
-			<textarea name="message" cols="30" rows="10" required autocomplete="off"></textarea>
+			<textarea name="message" class="input" cols="30" rows="10" required autocomplete="off"></textarea>
 			<label class="form_label">Sua Mensagem</label>
 			<span class="focus"></span>
 		</div>
 
 		<div class="btn-box btns">
-			<button type="submit" class="btn">Enviar</button>
+			<button type="submit" value="enviar" class="btn">Enviar</button>
 		</div>
 		
-		<input type="hidden" name="_next" value="https://teus369.github.io/my-portfolio/obrigado.html">
-		<input type="hidden" name="_autoresponse" value="sua mensagem personalizada">
 	</form>
 </section>
     <!-- footer design -->
