@@ -324,32 +324,39 @@
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+       document.getElementById('contactForm').addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const telefone = document.getElementById('telefone').value;
-            const assunto = document.getElementById('assunto').value;
-            const mensagen = document.getElementById('mensagen').value;
+            const formData = {
+                nome: document.getElementById('nome').value,
+                email: document.getElementById('email').value,
+                telefone: document.getElementById('telefone').value,
+                assunto: document.getElementById('assunto').value,
+                mensagen: document.getElementById('mensagen').value
+            };
 
-            const response = await fetch('https://us-central1-portfolio-dev-24401.cloudfunctions.net/submitForm', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ nome, email, telefone, assunto, mensagen })
-            });
+            try {
+                const response = await fetch('https://us-central1-portfolio-dev-24401.cloudfunctions.net/submitForm', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
 
-            if (response.ok) {
-                // alert('Formulário enviado com sucesso!');
-                window.location.href = 'obrigado.html';
-            } else {
-                const errorText = await response.text();
-                alert('Erro ao enviar formulário: ' + errorText);
+                if (response.ok) {
+                    window.location.href = 'obrigado.html';
+                } else {
+                    const errorText = await response.text();
+                    alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
+                }
+            } catch (error) {
+                alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
             }
         });
 
+
+// https://us-central1-portfolio-dev-24401.cloudfunctions.net/submitForm
     </script>
 
     <script src="js/script.js"></script>
