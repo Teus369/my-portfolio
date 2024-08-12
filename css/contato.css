@@ -113,13 +113,11 @@
     color: #060b23;
 }
 
-/* Adiciona uma classe para o estado de carregamento do botão */
 .btn-loading {
     cursor: not-allowed;
     opacity: 0.6;
 }
 
-/* Adiciona uma animação de carregamento */
 .btn-loading::after {
     content: '';
     display: inline-block;
@@ -132,7 +130,6 @@
     margin-left: 0.5em;
 }
 
-/* Animação de rotação */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
