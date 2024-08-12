@@ -324,39 +324,53 @@
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
 
     <script>
-       document.getElementById('contactForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
+       document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('#contactForm'); // Selecione o formulário
+    const submitButton = form.querySelector('button[type="submit"]'); // Selecione o botão de envio
 
-            const formData = {
-                nome: document.getElementById('nome').value,
-                email: document.getElementById('email').value,
-                telefone: document.getElementById('telefone').value,
-                assunto: document.getElementById('assunto').value,
-                mensagen: document.getElementById('mensagen').value
-            };
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault(); // Evita o envio padrão do formulário
 
-            try {
-                const response = await fetch('https://us-central1-portfolio-dev-24401.cloudfunctions.net/submitForm', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
+        // Adiciona a classe de carregamento e desativa o botão
+        submitButton.classList.add('btn-loading');
+        submitButton.disabled = true;
 
-                if (response.ok) {
-                    window.location.href = 'obrigado.html';
-                } else {
-                    const errorText = await response.text();
-                    alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
-                }
-            } catch (error) {
+        const formData = {
+            nome: document.getElementById('nome').value,
+            email: document.getElementById('email').value,
+            telefone: document.getElementById('telefone').value,
+            assunto: document.getElementById('assunto').value,
+            mensagen: document.getElementById('mensagen').value
+        };
+
+        try {
+            const response = await fetch('https://us-central1-portfolio-dev-24401.cloudfunctions.net/submitForm', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                window.location.href = 'obrigado.html'; // Redireciona para a página de agradecimento se o envio for bem-sucedido
+            } else {
+                const errorText = await response.text();
                 alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
             }
-        });
+        } catch (error) {
+            alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
+        } finally {
+            // Remove a classe de carregamento e reativa o botão
+            submitButton.classList.remove('btn-loading');
+            submitButton.disabled = false;
+        }
+    });
+});
 
 
-// https://us-central1-portfolio-dev-24401.cloudfunctions.net/submitForm
+
+        // https://us-central1-portfolio-dev-24401.cloudfunctions.net/submitForm
     </script>
 
     <script src="js/script.js"></script>

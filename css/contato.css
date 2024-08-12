@@ -112,3 +112,30 @@
     border: none;
     color: #060b23;
 }
+
+/* Adiciona uma classe para o estado de carregamento do botão */
+.btn-loading {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Adiciona uma animação de carregamento */
+.btn-loading::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid var(--text-color);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-left: 0.5em;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
