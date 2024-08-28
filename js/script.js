@@ -1,39 +1,3 @@
-//  // Função para detectar a rolagem e ativar a transição para a próxima seção
-//  function scrollHandler() {
-//     const sections = document.querySelectorAll('section'); // Seleciona todas as seções
-//     let currentSection = 0;
-
-//     // Encontra a seção atual
-//     for (let i = 0; i < sections.length; i++) {
-//         const section = sections[i];
-//         const rect = section.getBoundingClientRect();
-
-//         if (rect.top >= 0 && rect.top <= window.innerHeight) {
-//             currentSection = i;
-//             break;
-//         }
-//     }
-
-//     // Calcula o índice da próxima seção
-//     const nextSectionIndex = currentSection + 1;
-
-//     // Verifica se há uma próxima seção e faz a transição
-//     if (nextSectionIndex < sections.length) {
-//         const nextSection = sections[nextSectionIndex];
-//         window.scrollTo({
-//             top: nextSection.offsetTop,
-//             behavior: 'smooth'
-//         });
-//     }
-// }
-
-// // Adiciona um ouvinte de evento para a rolagem da página
-// window.addEventListener('wheel', scrollHandler);
-
-
-
-
-
 
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
@@ -96,6 +60,15 @@ function leiaMais(numero) {
 }
 
 // ________________________________________________________________________________________________________________________________
+
+document.getElementById('downloadButton').addEventListener('click', function () {
+    const button = this;
+    button.classList.add('loading');
+
+    setTimeout(() => {
+        button.classList.remove('loading');
+    }, 3000); // Ajuste o tempo conforme necessário para a animação
+});
 
 
 
