@@ -67,10 +67,9 @@ document.getElementById('downloadButton').addEventListener('click', function () 
 
     setTimeout(() => {
         button.classList.remove('loading');
-    }, 3000); // Ajuste o tempo conforme necessário para a animação
+    }, 5000); // Ajuste o tempo conforme necessário para a animação
 });
 
 
 
 // ________________________________________________________________________________________________________________________________
-

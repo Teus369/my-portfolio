@@ -3,24 +3,24 @@
         padding-bottom: 7rem;
 } 
 
-.contact h2 { /*????*/
+.contact h2 { 
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.contact form { /*????*/
+.contact form { 
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
 }
 
-.contact .imput-box {/*????*/
+.contact .imput-box {
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 1.8rem; /*add*/
+    margin-bottom: 1.8rem; 
 }
 
 .contact form .imput-box .imput-field {
