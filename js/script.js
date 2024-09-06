@@ -19,26 +19,27 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         if (top >= offset && top < offset + height) {
-            //ativando linha
             navLinks.forEach(links => {
-                links.classList.remove("active");
+                links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
-            sec.classList.add('show-animate')
-        }
-        else {
-            sec.classList.remove('show-animate')
+            sec.classList.add('show-animate');
+        } else {
+            sec.classList.remove('show-animate');
         }
     });
+
     // sticky header
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
-    // remove toggle icon and navbar when click navbar links (scroll)
+
+    // remover ícone de menu e fechar navbar quando clicar em links
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
-    // animation footer on scroll
+
+    // animação do footer no scroll
     let footer = document.querySelector('footer');
-    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+    footer.classList.toggle('show-animate', window.innerHeight + window.scrollY >= document.scrollingElement.scrollHeight);
 };
 
 // ________________________________________________________________________________________________________________________________
@@ -67,9 +68,7 @@ document.getElementById('downloadButton').addEventListener('click', function () 
 
     setTimeout(() => {
         button.classList.remove('loading');
-    }, 5000); // Ajuste o tempo conforme necessário para a animação
+    }, 5000); 
 });
-
-
 
 // ________________________________________________________________________________________________________________________________
