@@ -64,8 +64,8 @@
             <a href="./#contato">Contato</a>
             <!-- <a href="curriculo-mateus izaias.pdf" download id="downloadButton">Currículo <i
                     class='bx bx-download'></i></a> -->
-            <a href="" id="downloadButton">Currículo <i class='bx bx-download'></i></a>
-            <span class="active-nav"></span>
+                    <a href="#" id="downloadButton">Currículo <i class='bx bx-download'></i></a>
+                    <span class="active-nav"></span>
             <span class="animate" style="--i:2;"></span>
         </nav>
     </header>
@@ -467,24 +467,32 @@
                 }
             });
         });
-            // Novo código para o botão de download do currículo
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const downloadButton = document.getElementById('downloadButton');
+
+    downloadButton.addEventListener('click', async function (e) {
+        e.preventDefault();
+        
+        try {
+            const response = await fetch('https://us-central1-portfolio-dev-d3531.cloudfunctions.net/getDownloadToken');
             
-            document.querySelector('#downloadButton').addEventListener('click', async function(e) {
-    e.preventDefault();
-    
-    try {
-        const response = await fetch('https://us-central1-portfolio-dev-d3531.cloudfunctions.net/getDownloadToken');
-        if (response.ok) {
-            const data = await response.json();
-            const downloadUrl = data.downloadUrl;
-            window.location.href = downloadUrl;  // Redireciona o usuário para o link da URL assinada
-        } else {
+            if (response.ok) {
+                const data = await response.json();
+                const downloadUrl = data.url;
+
+                // Inicia o download
+                window.location.href = downloadUrl;
+            } else {
+                alert('Ocorreu um erro ao gerar o link de download. Tente novamente mais tarde.');
+            }
+        } catch (error) {
             alert('Ocorreu um erro ao gerar o link de download. Tente novamente mais tarde.');
         }
-    } catch (error) {
-        alert('Erro de rede ao tentar realizar o download.');
-    }
+    });
 });
+
+
 
     </script>
 
