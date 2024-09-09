@@ -469,25 +469,27 @@
         });
 
         document.addEventListener('DOMContentLoaded', () => {
-    const downloadButton = document.getElementById('downloadButton');
+    const downloadButton = document.querySelector('#downloadButton');
 
     downloadButton.addEventListener('click', async function (e) {
         e.preventDefault();
-        
+
         try {
             const response = await fetch('https://us-central1-portfolio-dev-d3531.cloudfunctions.net/getDownloadToken');
             
-            if (response.ok) {
-                const data = await response.json();
-                const downloadUrl = data.url;
-
-                // Inicia o download
-                window.location.href = downloadUrl;
-            } else {
-                alert('Ocorreu um erro ao gerar o link de download. Tente novamente mais tarde.');
+            if (!response.ok) {
+                throw new Error('Erro ao obter o token de download.');
             }
+
+            const data = await response.json();
+            const downloadUrl = data.url;
+
+            // Redireciona para a página de download
+            window.location.href = `download.html?redirect=${encodeURIComponent(downloadUrl)}`;
+
         } catch (error) {
-            alert('Ocorreu um erro ao gerar o link de download. Tente novamente mais tarde.');
+            console.error('Erro ao iniciar o download:', error);
+            alert('Ocorreu um erro ao tentar iniciar o download. Tente novamente mais tarde.');
         }
     });
 });
