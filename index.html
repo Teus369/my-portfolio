@@ -472,29 +472,22 @@
     const downloadButton = document.querySelector('#downloadButton');
 
     downloadButton.addEventListener('click', async function (e) {
-        e.preventDefault();
+        e.preventDefault(); 
 
         try {
             const response = await fetch('https://us-central1-portfolio-dev-d3531.cloudfunctions.net/getDownloadToken');
-            
-            if (!response.ok) {
-                throw new Error('Erro ao obter o token de download.');
-            }
-
             const data = await response.json();
-            const downloadUrl = data.url;
 
-            // Redireciona para a página de download
-            window.location.href = `download.html?redirect=${encodeURIComponent(downloadUrl)}`;
-
+            if (response.ok) {
+                window.open(data.url, '_blank'); 
+            } else {
+                alert('Ocorreu um erro ao gerar o link de download. Tente novamente mais tarde.');
+            }
         } catch (error) {
-            console.error('Erro ao iniciar o download:', error);
-            alert('Ocorreu um erro ao tentar iniciar o download. Tente novamente mais tarde.');
+            alert('Ocorreu um erro ao gerar o link de download. Tente novamente mais tarde.');
         }
     });
 });
-
-
 
     </script>
 
